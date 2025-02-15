@@ -58,4 +58,19 @@ buttonCancel.addEventListener('click', () => {
     buttonValidate.classList.remove('hidden')
 })
 
-//
+// Faire apparaître la pop-up lors du chargement de la page, puis la faire disparaître selon le choix du user
+
+let popup = document.getElementById('pop-up')
+setTimeout(() => {
+    popup.classList.remove('hidden', 'opacity-0', 'translate-y-4')
+}, 2000);
+
+let croix = document.getElementById('croix')
+croix.addEventListener('click', () => {
+    popup.classList.add('hidden')
+})
+
+let like = document.getElementById('like')
+like.addEventListener('click', () => {
+    popup.classList.add('hidden')
+})
