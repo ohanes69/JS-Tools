@@ -59,10 +59,12 @@ buttonCancel.addEventListener('click', () => {
 })
 
 // Faire apparaître la pop-up lors du chargement de la page, puis la faire disparaître selon le choix du user
-
 let popup = document.getElementById('pop-up')
 setTimeout(() => {
-    popup.classList.remove('hidden', 'opacity-0', 'translate-y-4')
+    popup.classList.remove('hidden')
+    setTimeout(() => {
+        popup.classList.remove('opacity-0', 'scale-90', 'translate-y-4');
+    }, 50);
 }, 2000);
 
 let croix = document.getElementById('croix')
@@ -73,4 +75,54 @@ croix.addEventListener('click', () => {
 let like = document.getElementById('like')
 like.addEventListener('click', () => {
     popup.classList.add('hidden')
+})
+
+// Permet de voir la progression de la lecture du texte
+const progressBar = document.getElementById('progressBar')
+const progressText = document.getElementById('progressText')
+const scrollBar = document.getElementById('scrollBar')
+
+scrollBar.addEventListener('scroll', () => {
+    let scrollTop = scrollBar.scrollTop;
+    let scrollHeight = scrollBar.scrollHeight - scrollBar.clientHeight;
+    let progress = Math.round((scrollTop / scrollHeight) * 100);
+
+    progress = Math.max(0, Math.min(progress, 100));
+
+    progressText.textContent = progress + '%'
+
+    progressBar.style.backgroundColor = `rgb(${200 - progress}, ${255 - progress}, ${100 - progress})`;
+})
+
+// Utilisation de 'mouseover' et 'mouseout'
+const cursorOver = document.getElementById('cursorOver')
+cursorOver.addEventListener('mouseover', () => {
+    cursorOver.classList.add('p-4')
+    cursorOver.classList.add('text-lg')
+})
+
+cursorOver.addEventListener('mouseout', () => {
+    cursorOver.classList.remove('p-4')
+    cursorOver.classList.remove('text-lg')
+})
+
+// Le conteneur apparaît lors du survol
+const cursor = document.getElementById('cursor')
+cursor.addEventListener('mouseover', () => {
+    cursor.classList.add('rounded-lg', 'cursor-pointer', 'bg-violet-200', 'text-violet-500')
+})
+
+cursor.addEventListener('mouseout', () => {
+    cursor.classList.remove('rounded-lg', 'cursor-pointer', 'bg-violet-200', 'text-violet-500')
+})
+
+// Le texte change lors du double cliques puis reviens au texte de base après 750
+const doubleClick = document.getElementById('doubleClick')
+doubleClick.addEventListener('dblclick', () => {
+    doubleClick.innerHTML = '✔ Validé !';
+    doubleClick.classList.add('bg-green-400', 'scale-105');
+
+    setTimeout(() => {
+        doubleClick.innerHTML = 'Double click'
+    }, 750);
 })
