@@ -6,7 +6,14 @@
     <title>Learning JS</title>
     <link href="./src/output.css" rel="stylesheet">
     <script src="./index.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
 <body class="bg-white">
     <!-- Validate & Cancel change -->
     <div class="flex flex-row-reverse p-2 gap-2">
@@ -64,6 +71,33 @@
         <p id="cursor" class="p-2 cursor-pointer">Le curseur</p>
         <!-- Changer le texte puis revenir au texte initial lors du double click -->
         <p id="doubleClick" class="p-2 bg-teal-300 rounded-lg cursor-pointer">Double click</p>
+    </div>
+    <!-- Défilement des différents burgers -->
+    <div class="flex flex-col items-center gap-4 my-6">
+        <div id="cheese" class="bg-red-100 hover:bg-red-200 rounded-lg w-64 h-* shadow-lg cursor-pointer py-4 px-4" data-aos="fade-left" data-aos-duration="1000">
+            <img src="img/cheeseburger.png" alt="cheeseburger">
+            <hr class="w-12 border-black my-4 mx-auto">
+            <h2 class="flex justify-center font-bold text-lg">LE RIYAL</h2>
+            <p id="cheese-text" class="p-2 text-center font-semibold text-red-400 mb-6">Un pain suédois, des steaks de bœuf et une bonne sauce piquante</p>
+        </div>
+        <div id="chicken" class="bg-red-100 hover:bg-red-200 rounded-lg w-64 h-* shadow-lg cursor-pointer py-4 px-4" data-aos="fade-right" data-aos-duration="1000">
+            <img src="img/chickenburger.png" alt="chickenburger">
+            <hr class="w-12 border-black my-4 mx-auto">
+            <h2 class="flex justify-center font-bold text-lg">L'AGNEL</h2>
+            <p id="chicken-text" class="p-2 text-center font-semibold text-red-400 mb-6">Pain burger et un filet de poulet pané avec sa sauce césar :)</p>
+        </div>
+        <div id="cheese2" class="bg-red-100 hover:bg-red-200 rounded-lg w-64 h-* shadow-lg cursor-pointer py-4 px-4" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/cheeseburger.png" alt="cheeseburger">
+            <hr class="w-12 border-black my-4 mx-auto">
+            <h2 class="flex justify-center font-bold text-lg">LE RIYAL</h2>
+            <p id="cheese-text2" class="p-2 text-center font-semibold text-red-400 mb-6">Un pain suédois, des steaks de bœuf et une bonne sauce piquante</p>
+        </div>
+        <div id="chicken2" class="bg-red-100 hover:bg-red-200 rounded-lg w-64 h-* shadow-lg cursor-pointer py-4 px-4" data-aos="flip-down" data-aos-duration="1000">
+            <img src="img/chickenburger.png" alt="chickenburger">
+            <hr class="w-12 border-black my-4 mx-auto">
+            <h2 class="flex justify-center font-bold text-lg">L'AGNEL</h2>
+            <p id="chicken2-text" class="p-2 text-center font-semibold text-red-400 mb-6">Pain burger et un filet de poulet pané avec sa sauce césar :)</p>
+        </div>
     </div>
 </body>
 </html>

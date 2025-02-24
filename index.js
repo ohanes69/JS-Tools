@@ -126,3 +126,74 @@ doubleClick.addEventListener('dblclick', () => {
         doubleClick.innerHTML = 'Double click'
     }, 750);
 })
+
+// Ajoute un padding lors du survol, changement de la couleur du texte
+// 1
+const cheese = document.getElementById('cheese')
+const cheeseText = document.getElementById('cheese-text')
+
+cheese.addEventListener('mouseover', () => {
+    cheese.classList.remove('py-4')
+    cheese.classList.add('py-6')
+    cheeseText.classList.remove('text-red-400')
+    cheeseText.classList.add('text-black')
+})
+
+cheese.addEventListener('mouseout', () => {
+    cheese.classList.remove('py-6')
+    cheese.classList.add('py-4')
+    cheeseText.classList.remove('text-black')
+    cheeseText.classList.add('text-red-400')
+})
+
+// 2
+const chicken = document.getElementById('chicken')
+const chickenText = document.getElementById('chicken-text')
+
+chicken.addEventListener('mouseover', () => {
+    chicken.classList.remove('py-4')
+    chicken.classList.add('py-6')
+    chickenText.classList.remove('text-red-400')
+    chickenText.classList.add('text-black')
+})
+
+chicken.addEventListener('mouseout', () => {
+    chicken.classList.remove('py-6')
+    chicken.classList.add('py-4')
+    chickenText.classList.remove('text-black')
+    chickenText.classList.add('text-red-400')
+})
+
+// 3
+const cheese2 = document.getElementById('cheese2')
+const cheeseText2 = document.getElementById('cheese-text2')
+
+cheese2.addEventListener('mouseover', () => {
+    cheese2.classList.remove('py-4')
+    cheese2.classList.add('py-6')
+    cheeseText2.classList.remove('text-red-400')
+    cheeseText2.classList.add('text-black')
+})
+
+cheese2.addEventListener('mouseout', () => {
+    cheese2.classList.remove('py-6')
+    cheese2.classList.add('py-4')
+    cheeseText2.classList.remove('text-black')
+    cheeseText2.classList.add('text-red-400')
+})
+
+// 4
+const chicken2 = document.getElementById('chicken2')
+const chicken2Text = document.getElementById('chicken2-text')
+
+chicken2.addEventListener('mouseover', () => {
+    chicken2.classList.remove('py-4')
+    chicken2.classList.add('py-6')
+    chicken2Text.classList.remove('text-red-400')
+    chicken2Text.classList.add('text-black')
+})
+
+// Pour le scrool, CDN
+document.addEventListener("DOMContentLoaded", () => {
+    AOS.init();
+});
