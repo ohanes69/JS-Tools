@@ -193,7 +193,47 @@ chicken2.addEventListener('mouseover', () => {
     chicken2Text.classList.add('text-black')
 })
 
+chicken2.addEventListener('mouseout', () => {
+    chicken2.classList.remove('py-6')
+    chicken2.classList.add('py-2')
+    chicken2Text.classList.remove('text-black')
+    chicken2Text.classList.add('text-red-400')
+})
+
 // Pour le scrool, CDN
 document.addEventListener("DOMContentLoaded", () => {
     AOS.init();
 });
+
+// you can CHANGE
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const textContainer = document.getElementById('textContainer');
+
+function updateTextPosition() {
+    const words = Array.from(textContainer.children); // converti en tableau les éléments
+
+    words.forEach((word, index) => { // forEach parcours les éléments, index === un chiffre par éléments, 0 => 8
+        word.classList.remove("opacity-100", "opacity-20");
+        if (index === Math.floor(words.length / 2)) { 
+            word.classList.add("opacity-100"); // add opacity-100 pour le mot au milieu => 4 - index - 4
+        } else {
+            word.classList.add("opacity-20"); // add opacity-20 pour les autres
+        }
+    });
+}
+
+prevBtn.addEventListener('click', () => {
+    textContainer.prepend(textContainer.lastElementChild); // prepend ajoute le dernier élément (lastElementChild) à l’avant du conteneur 
+    updateTextPosition(); // fonction appelée pour mettre à jour les classes d’opacité en fonction de l’ordre actuel des mots dans le conteneur
+});
+
+nextBtn.addEventListener('click', () => {
+    textContainer.appendChild(textContainer.firstElementChild); 
+    // firstElementChild récupère le premier le premier mot dans la liste
+    // appendChild déplace cet élément à la fin du conteneur, il fait descendre le premier mot de la liste à la fin
+    updateTextPosition();
+});
+
+// Initialisation de l'affichage
+updateTextPosition();
