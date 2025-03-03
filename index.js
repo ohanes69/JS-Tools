@@ -30,11 +30,16 @@ buttonColor.addEventListener('click', () => {
 let buttonMoon = document.getElementById('moon')
 buttonMoon.addEventListener('click', () => {
     document.body.classList.replace('bg-white', 'bg-black')
+    point.classList.replace('text-black', 'text-gray-200')
+    betaAccess.classList.replace('bg-black', 'bg-white')
+    betaAccess.classList.replace('text-white', 'text-black')
+    twitter.classList.add('bg-amber-600')
 })
 
 let buttonSun = document.getElementById('sun')
 buttonSun.addEventListener('click', () => {
     document.body.classList.add('bg-black', 'bg-white')
+    twitter.classList.remove('bg-amber-600')
 })
 
 // Afficher une couleur random pour le background
@@ -235,5 +240,11 @@ nextBtn.addEventListener('click', () => {
     updateTextPosition();
 });
 
-// Initialisation de l'affichage
-updateTextPosition();
+updateTextPosition(); // Initialisation de l'affichage
+
+// Landing Page
+const point = document.getElementById('point')
+
+const betaAccess = document.getElementById('betaAccess')
+
+const twitter = document.getElementById('twitter')

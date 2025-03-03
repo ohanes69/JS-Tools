@@ -6,6 +6,7 @@
     <title>Learning JS</title>
     <link href="./src/output.css" rel="stylesheet">
     <script src="./index.js" defer></script>
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <!-- AOS JS for burger -->
@@ -99,6 +100,7 @@
             <p id="chicken2-text" class="p-2 text-center font-semibold text-red-400 mb-6">Pain burger et un filet de poulet pané avec sa sauce césar :)</p>
         </div>
     </div>
+    <!-- Change words onClick -->
     <div id="youCanChange" class="h-screen flex justify-center items-center mb-4">
         <div class="text-5xl font-bold flex items-center">
             <div class="flex items-center mr-2">
@@ -109,15 +111,33 @@
                 <p class="text-red-500 opacity-20 transition-opacity duration-300 ease-in-out">solve.</p>
                 <p class="text-yellow-500 opacity-20 transition-opacity duration-300 ease-in-out">build.</p>
                 <p class="text-green-500 opacity-20 transition-opacity duration-300 ease-in-out">develop.</p>
-                <p class="text-green-600">debug.</p>
+                <p class="text-green-600 transition-opacity duration-300 ease-in-out">debug.</p>
                 <p class="text-red-400 opacity-20 transition-opacity duration-300 ease-in-out">design.</p>
                 <p class="text-red-500 opacity-20 transition-opacity duration-300 ease-in-out">solve.</p>
                 <p class="text-yellow-500 opacity-20 transition-opacity duration-300 ease-in-out">build.</p>
                 <p class="text-green-500 opacity-20 transition-opacity duration-300 ease-in-out">develop.</p>
             </div>
-                <button id="prevBtn" class="text-blue-200 cursor-pointer pt-3"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#BFDBFE"><path d="M446.67-160v-513l-240 240L160-480l320-320 320 320-46.67 47-240-240v513h-66.66Z"/></svg></button>
-                <button id="nextBtn" class="text-blue-200 cursor-pointer pt-3"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#BFDBFE"><path d="M446.67-800v513l-240-240L160-480l320 320 320-320-46.67-47-240 240v-513h-66.66Z"/></svg></button>
+                <button id="prevBtn" class="text-blue-200 cursor-pointer pt-3"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="25px" fill="#BFDBFE"><path d="M446.67-160v-513l-240 240L160-480l320-320 320 320-46.67 47-240-240v513h-66.66Z"/></svg></button>
+                <button id="nextBtn" class="text-blue-200 cursor-pointer pt-3"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="25px" fill="#BFDBFE"><path d="M446.67-800v513l-240-240L160-480l320 320 320-320-46.67-47-240 240v-513h-66.66Z"/></svg></button>
         </div>
+    </div>
+    <!-- Landing Page -->
+    <div class="h-screen flex flex-col items-center justify-start border-l-8 border-l-teal-400 border-r-8 border-r-purple-600 border-b-8 border-b-indigo-500">
+        <p class="font-bold text-lg px-24 py-1 rounded-b-3xl bg-gradient-to-r  from-teal-400 to-purple-600">Influs. jobs</p>
+        <p id="point" class="font-bold text-lg text-black">•</p>
+        <p class="bg-gray-200 text-gray-600 py-1 px-4 rounded-3xl">Launching Soon</p>
+        <div class="flex space-x-4 mt-24 items-center">
+            <img src="img/snapchat.png" alt="snapchat" class="w-12 opacity-50 hover:opacity-100 hover:scale-110 transform hover:translate-y-2 transition-all duration-300">
+            <img src="img/facebook.png" alt="facebook" class="w-12 opacity-65 hover:opacity-100 hover:scale-110 transform hover:translate-y-2 transition-all duration-300">
+            <img src="img/twitter.png" alt="twitter" id="twitter" class="w-14 opacity-100 hover:scale-110 transform hover:translate-y-2 transition-all duration-300">
+            <img src="img/instagram.png" alt="instagram" class="w-12 opacity-65 hover:opacity-100 hover:scale-110 transform hover:translate-y-2 transition-all duration-300">
+            <img src="img/tiktok.png" alt="tiktok" class="w-12 opacity-50 hover:opacity-100 hover:scale-110 transform hover:translate-y-2 transition-all duration-300">
+        </div>
+        <div class="flex items-center justify-center flex-grow">
+            <h1 class="text-center font-semibold text-5xl w-xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-600 transform transition-all duration-700 hover:scale-110">Skyrocket your social media group growth with Influ. jobs</h1>
+        </div>
+        <p id="betaAccess" class="bg-black text-white rounded-3xl py-2 px-6 mb-32 shadow-lg transform transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">Get Beta Access 🚀</p>
+        <img src="img/undraw_a-day-off_uk4x.svg" alt="img" class="w-32">
     </div>
 </body>
 </html>
