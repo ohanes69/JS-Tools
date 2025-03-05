@@ -242,9 +242,43 @@ nextBtn.addEventListener('click', () => {
 
 updateTextPosition(); // Initialisation de l'affichage
 
-// Landing Page
+// Landing Page Influs. jobs
 const point = document.getElementById('point')
 
 const betaAccess = document.getElementById('betaAccess')
 
 const twitter = document.getElementById('twitter')
+
+// Landing Page Penny
+const menuChevron = document.getElementById('menuChevron');
+const bottomChevron = document.getElementById('bottomChevron');
+
+bottomChevron.addEventListener("mouseenter", () => {
+    menuChevron.classList.remove('hidden');
+});
+
+menuChevron.addEventListener("mouseleave", () => {
+    menuChevron.classList.add('hidden');
+});
+
+const menuChevron2 = document.getElementById('menuChevron2');
+const bottomChevron2 = document.getElementById('bottomChevron2');
+
+bottomChevron2.addEventListener("mouseenter", () => {
+    menuChevron2.classList.remove('hidden');
+});
+
+menuChevron2.addEventListener("mouseleave", () => {
+    menuChevron2.classList.add('hidden');
+});
+
+const menuChevron3 = document.getElementById('menuChevron3');
+const bottomChevron3 = document.getElementById('bottomChevron3');
+
+bottomChevron3.addEventListener("mouseenter", () => {
+    menuChevron3.classList.remove('hidden');
+});
+
+menuChevron3.addEventListener("mouseleave", () => {
+    menuChevron3.classList.add('hidden');
+});
